@@ -1,4 +1,5 @@
-I am software developer who loves to learn and explore new technologies. When I'm not coding, you can find me indulging in my love for video games 💥.
+👋 Hi there!
 
-Feel free to explore my portfolio and get in touch with me for any exciting opportunities or collaborations.
-🔥
+I'm a self-taught developer who loves learning and creating. When I'm not coding, you can find me immersed in video games 🎮.
+
+Feel free to explore my portfolio and reach out to me for any exciting opportunities or collaborations. Let's create something amazing together! ✨
