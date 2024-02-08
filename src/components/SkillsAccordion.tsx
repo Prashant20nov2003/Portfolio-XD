@@ -17,7 +17,7 @@ const LANGUAGES = [
   "SCSS",
 ];
 
-const FRAMEWORKS = ["React", "Node.js", "Express", "Astro.js", "Next.js" , "SvelteKit" , "Mux", "Gin" , "Chi"];
+const FRAMEWORKS = ["React", "Node.js", "ShadcnUI", "TailwindCSS","Express", "Astro.js", "Next.js" , "SvelteKit" , "Mux", "Gin" , "Chi"];
 
 const DEV_TOOLS = [
   "Nvim",
