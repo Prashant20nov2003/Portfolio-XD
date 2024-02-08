@@ -1,0 +1,51 @@
+---
+import ProjectCard from '@/components/Cards/ProjectCard.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+const allProjects = await getCollection('projects');
+const sortedProjects = allProjects.sort(
+  (a, b) => (a.data.featuredOrder || 999) - (b.data.featuredOrder || 999)
+);
+---
+
+<Layout isHome={false} title="Projects">
+  <div class="projects-list">
+    {
+      sortedProjects.map((project) => (
+        <ProjectCard
+          class="projects-list__item"
+          title={project.data.title}
+          description={project.data.description}
+          imagesrc={project.data.cover}
+          imageAlt={project.data.coverAlt}
+          github={project.data.github}
+          liveLink={project.data.liveLink}
+          postLink={project.data.postLink}
+          tags={project.data.tags}
+          href={`/projects/${project.slug}`}
+        />
+      ))
+    }
+  </div>
+</Layout>
+
+<style>
+  @media screen and (min-width: 1024px) {
+    .projects-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-auto-columns: 1fr;
+      column-gap: 16px;
+      row-gap: 16px;
+      padding-bottom: 6rem;
+    }
+    .projects-list__item {
+      margin-bottom: 0;
+    }
+    .projects-list__item:nth-child(2n) {
+      margin-top: 25%;
+      margin-bottom: -25%;
+    }
+  }
+</style>

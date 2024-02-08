@@ -1,0 +1,55 @@
+---
+interface Props {
+  navItems: string[];
+}
+
+const { navItems } = Astro.props;
+---
+
+<div class="nav">
+  <ul>
+    {
+      navItems.map((item) => {
+        return (
+          <li>
+            <a href={`#${item}`} class="nav__item" id={`${item}Nav`}>
+              {item}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>
+<style>
+  .nav {
+    display: none;
+  }
+
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .nav li {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+
+  .nav__item {
+    color: var(--primary-text);
+    opacity: 0.4;
+    transition-duration: 500ms;
+  }
+
+  .nav__item:not(.toggled):hover {
+    opacity: 0.7;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .nav {
+      display: block;
+    }
+  }
+</style>

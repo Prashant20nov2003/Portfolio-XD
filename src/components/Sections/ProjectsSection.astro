@@ -1,0 +1,31 @@
+---
+import ProjectCard from "@/components/Cards/ProjectCard.astro";
+import Link from "@/components/Link.astro";
+import { getCollection } from "astro:content";
+const allProjects = await getCollection("projects");
+const filteredProjects = allProjects
+  .filter((project) => project.data.featured)
+  .sort((a, b) => a.data.featuredOrder - b.data.featuredOrder);
+---
+
+<>
+  {
+    filteredProjects.map((project) => (
+      <ProjectCard
+        class="projects-list__item"
+        title={project.data.title}
+        description={project.data.description}
+        imagesrc={project.data.cover}
+        imageAlt={project.data.coverAlt}
+        github={project.data.github}
+        liveLink={project.data.liveLink}
+        postLink={project.data.postLink}
+        tags={project.data.tags}
+      />
+    ))
+  }
+  <p>
+    <Link url="/projects" name="View more projects" />
+  </p>
+</>
+-

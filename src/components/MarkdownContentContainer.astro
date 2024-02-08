@@ -1,0 +1,156 @@
+---
+interface Props {}
+---
+
+<div>
+  <slot />
+</div>
+
+<style is:inline>
+  :root {
+    line-height: 1.75;
+  }
+
+  * {
+    scroll-margin: 6rem;
+  }
+
+  h1:first-of-type,
+  h2:first-of-type,
+  h3:first-of-type,
+  h4:first-of-type,
+  h5:first-of-type,
+  h6:first-of-type {
+    margin-top: 0;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Archivo Black", sans-serif;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h1:first-of-type {
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    margin-top: 3.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .main--alt a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.5rem;
+    list-style: inside;
+  }
+
+  li {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  blockquote:not(.unset) {
+    font-size: 1.125rem;
+    width: 85%;
+    margin: 0 auto;
+    font-style: italic;
+    color: var(--text);
+    padding: 1.5rem 3rem;
+    line-height: 1.9;
+    position: relative;
+  }
+
+  blockquote:not(.unset):before {
+    font-family: Arial;
+    content: "\201c";
+    color: var(--text);
+    font-size: 4rem;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+
+  blockquote:not(.unset):after {
+    content: "";
+  }
+
+  code,
+  code p,
+  code span {
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  :not(pre) > code {
+    padding: 2px 5px;
+    color: var(--primary-text);
+    background-color: var(--primary-bg);
+    border: 1px solid var(--primary-text);
+    border-radius: 4px;
+  }
+
+  pre[class*="astro-code"] {
+    font-family: "JetBrains Mono", monospace;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    overflow: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+
+  table thead tr {
+    background-color: var(--primary-text);
+    color: var(--primary-bg);
+    text-align: left;
+  }
+
+  table th,
+  table td {
+    padding: 12px 15px;
+  }
+
+  table tbody tr {
+    border-bottom: 1px solid var(--primary-text);
+  }
+
+  table tbody tr:nth-of-type(even) {
+    background-color: var(--primary-text);
+    color: var(--primary-bg);
+  }
+
+  table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--primary-text);
+  }
+
+  table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+
+  .post-info__header {
+    margin-bottom: 1.4rem;
+  }
+</style>

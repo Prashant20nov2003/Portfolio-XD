@@ -1,0 +1,115 @@
+---
+import { Image } from 'astro:assets';
+import Link from '@/components/Link.astro';
+
+interface Props {
+  class?: string;
+  title: string;
+  description?: string;
+  imagesrc: ImageMetadata;
+  imageAlt: string;
+  github?: string;
+  liveLink?: string;
+  postLink?: string;
+  tags?: string[];
+  href?: string;
+}
+const {
+  class: className,
+  title,
+  description,
+  imagesrc,
+  imageAlt,
+  github,
+  liveLink,
+  postLink,
+  tags,
+  href,
+  ...rest
+} = Astro.props;
+---
+
+<div class={`project-card ${className}`} target="_blank" {...rest}>
+  {
+    href ? (
+      <a href={href} aria-label={`Go to ${title}'s project page'`}>
+        <Image src={imagesrc} alt={imageAlt} />
+      </a>
+    ) : (
+      <Image src={imagesrc} alt={imageAlt} />
+    )
+  }
+  <div class="project-card__content">
+    <h2>
+      {title}
+    </h2>
+    {description && <p class="project-card__description">{description}</p>}
+    <div class="project-card__tags">
+      {tags && tags.map((tag) => <span class="project-card__tag">{tag}</span>)}
+    </div>
+    <div class="project-card__links">
+      {github && <Link url={github} name="Github" redirect={true} />}
+      {liveLink && <Link url={liveLink} name="Live Site" redirect={true} />}
+      {postLink && <Link url={postLink} name="Learn More" redirect={false} />}
+    </div>
+  </div>
+</div>
+
+<style>
+  .project-card {
+    margin-bottom: 2.5rem;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    border: 1px solid rgba(var(--primary-text-value), 0.4);
+    border-radius: 20px;
+  }
+  .project-card img {
+    object-fit: cover;
+    width: inherit;
+    height: 10rem;
+    border-radius: 20px;
+  }
+
+  .project-card a {
+    width: 100%;
+  }
+
+  .project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1.4rem;
+  }
+
+  .project-card__tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border: 1px solid rgba(var(--primary-text-value), 0.4);
+    border-radius: 20px;
+  }
+  .project-card__links {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  .project-card__link:hover {
+    color: rgba(var(--primary-text-value), 1);
+  }
+
+  .project-card__content {
+    padding: 1rem;
+  }
+
+  .project-card__description {
+    margin-bottom: 1rem;
+  }
+
+  .project-card h2 {
+    margin-bottom: 0.5rem;
+  }
+</style>

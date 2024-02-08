@@ -1,0 +1,47 @@
+---
+interface Props {
+  timespan: string;
+  title: string;
+  organization: string;
+  description?: string;
+}
+const { timespan, title, organization, description } = Astro.props;
+---
+
+<div class="resume-card">
+  <div class="resume-card__title">
+    <span>{timespan}</span>
+    <h2>{title}</h2>
+    <span class="resume-card__subtext">{organization}</span>
+  </div>
+  {description && <p>{description}</p>}
+</div>
+
+<style>
+  .resume-card {
+    margin-bottom: 2rem;
+  }
+
+  .resume-card__title {
+    margin-bottom: 1rem;
+  }
+
+  .resume-card__title > span {
+    margin-bottom: 1rem;
+  }
+
+  .resume-card__title > .resume-card__subtext {
+    opacity: 0.7;
+    text-transform: uppercase;
+  }
+
+  .resume-card__title > h2 {
+    margin-bottom: 0.2rem;
+  }
+
+  span {
+    font-family: "Archivo Narrow", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+</style>

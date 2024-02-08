@@ -1,0 +1,27 @@
+---
+import MarkdownContentContainer from '@/components/MarkdownContentContainer.astro';
+import FormattedDate from '@/components/FormattedDate.astro';
+import Tags from '@/components/Tags.astro';
+import readingTime from 'reading-time';
+import Layout from '@/layouts/Layout.astro';
+import { imageConfig } from 'astro:assets';
+const { frontmatter, content } = Astro.props;
+const stats = readingTime(content);
+---
+
+<Layout isHome={false} content={content}>
+  <h1>{frontmatter.title}</h1>
+  <div class="post-info">
+    <div class="post-info__header">
+      <p>
+        Published on <FormattedDate date={frontmatter.pubDate} /><span>
+          - {stats.text}</span
+        >
+      </p>
+    </div>
+    <Tags tags={frontmatter.tags} />
+  </div>
+  <MarkdownContentContainer>
+    <slot />
+  </MarkdownContentContainer>
+</Layout>

@@ -1,0 +1,21 @@
+---
+import ProjectCard from '@/components/Cards/ProjectCard.astro';
+import Layout from '@/layouts/Layout.astro';
+const { frontmatter } = Astro.props;
+---
+
+<Layout isHome={false} title="Projects">
+  <div class="projects-list">
+    <ProjectCard
+      class="projects-list__item"
+      title={frontmatter.title}
+      description={frontmatter.description}
+      imagesrc={frontmatter.cover}
+      imageAlt={frontmatter.coverAlt}
+      github={frontmatter.github}
+      liveLink={frontmatter.liveLink}
+      postLink={frontmatter.postLink}
+      tags={frontmatter.tags}
+    />
+  </div>
+</Layout>

@@ -1,0 +1,57 @@
+---
+const path = Astro.url.pathname;
+const crumbs = path.split("/").filter((crumb) => crumb);
+crumbs.unshift("/");
+
+const links = {};
+let tmpLink = "";
+
+// NOTE: JS guarantees insertion order for string keys.
+crumbs.forEach((crumb, index) => {
+  tmpLink = tmpLink.concat(index > 1 ? "/" : "", crumb);
+  const linkName =
+    crumb === "/" ? "Home" : crumb[0].toUpperCase() + crumb.slice(1);
+  links[linkName] = tmpLink;
+});
+---
+
+<p>
+  {
+    Object.keys(links).map((name, index, array) => {
+      const divider = () =>
+        index === crumbs.length - 1 ? null : <span>/</span>;
+      return (
+        <>
+          <a
+            href={links[name]}
+            class={`breadcrumbs__link ${
+              index === array.length - 1 ? "breadcrumbs__link--current" : ""
+            }`}
+          >
+            {name}
+          </a>
+          {divider}
+        </>
+      );
+    })
+  }
+</p>
+
+<style>
+  p {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumbs__link {
+    color: rgba(var(--primary-text-value), 0.4);
+    transition-duration: 500ms;
+  }
+  .breadcrumbs__link--current {
+    color: rgba(var(--primary-text-value), 1);
+  }
+  .breadcrumbs__link:hover {
+    color: rgba(var(--primary-text-value), 1);
+  }
+</style>

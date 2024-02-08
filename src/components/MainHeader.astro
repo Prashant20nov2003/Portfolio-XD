@@ -1,0 +1,81 @@
+---
+import Navigation from "@/components/Navigation.astro";
+import Socials from "@/components/Socials.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import TOC from "@/components/TOC.astro";
+
+interface Props {
+  // if isHome is true, padding will be added, and nav and socials will be included in header.
+  isHome: boolean;
+  title?: string;
+  subtitle?: string;
+  details?: string;
+  navItems?: string[];
+  content?: string;
+}
+
+const { isHome, title, subtitle, details, navItems, content } = Astro.props;
+const hasHeaderTexts = title || subtitle || details;
+---
+
+<header class={isHome ? "header--home" : "header--alt"}>
+  {
+    hasHeaderTexts && (
+      <div class="header-texts">
+        {title && <h1>{title}</h1>}
+        {subtitle && <h2>{subtitle}</h2>}
+        {details && <p>{details}</p>}
+      </div>
+    )
+  }
+  {!isHome && <Breadcrumbs />}
+  {isHome && <Navigation navItems={navItems} />}
+  {isHome && <Socials />}
+  {content && <TOC content={content} />}
+</header>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    max-width: 30rem;
+    padding: 4rem 2rem;
+  }
+
+  header * {
+    margin-bottom: 0;
+  }
+
+  .header--alt {
+    gap: 1rem;
+  }
+
+  .header-texts > h2 {
+    margin-top: 0.3rem;
+    margin-bottom: 1.3rem;
+  }
+
+  header h1 {
+    line-height: 1;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    header {
+      position: sticky;
+      top: 0;
+      width: 40%;
+      padding: 6rem 2rem;
+      max-height: 100vh;
+    }
+    .header--home {
+      justify-content: space-between;
+    }
+    .header--alt {
+      justify-content: flex-start;
+      width: 30%;
+    }
+  }
+</style>

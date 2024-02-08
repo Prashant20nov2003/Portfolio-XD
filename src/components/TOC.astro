@@ -1,0 +1,52 @@
+---
+import { toMarkdown } from "mdast-util-to-markdown";
+import remarkHtml from "remark-html";
+import remarkParse from "remark-parse";
+import { fromMarkdown } from "mdast-util-from-markdown";
+import { toc } from "mdast-util-toc";
+import { unified } from "unified";
+
+const { content } = Astro.props;
+const mdast = fromMarkdown(content);
+const table = toc(mdast, { tight: true, maxDepth: 3 });
+let html;
+try {
+  const mdTable = toMarkdown(table.map);
+  html = await unified().use(remarkParse).use(remarkHtml).process(mdTable);
+} catch (e) {
+  console.error("No heading found");
+}
+---
+
+<div class="toc">
+  <h2>Contents</h2>
+  {html || <p> No headings here 🫤</p>}
+</div>
+
+<style is:global>
+  .toc h2 {
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .toc ul {
+    padding-left: 1.5rem;
+    margin-top: 0;
+  }
+
+  .toc ul:not(li ul) {
+    padding: 0;
+  }
+
+  .toc li {
+    list-style-type: none;
+  }
+  .toc {
+    display: none;
+  }
+  @media screen and (min-width: 1024px) {
+    .toc {
+      display: block;
+    }
+  }
+</style>

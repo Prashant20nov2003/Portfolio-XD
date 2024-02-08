@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "@/components/FormattedDate.astro";
+
+interface Props {
+  posts: CollectionEntry<"posts">[];
+}
+
+const { posts } = Astro.props;
+---
+
+<div class="posts-list">
+  {
+    posts.map((post) => (
+      <li>
+        <a href={`/posts/${post.slug}`}>
+          <>
+            <span>{post.data.title}</span>
+            <FormattedDate date={post.data.pubDate} />
+          </>
+        </a>
+      </li>
+    ))
+  }
+</div>
+<style>
+  li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>

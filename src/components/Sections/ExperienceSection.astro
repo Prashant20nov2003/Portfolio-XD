@@ -1,0 +1,21 @@
+---
+import ResumeCard from '@/components/Cards/ResumeCard.astro';
+import { getCollection } from 'astro:content';
+const aboutSnippets = await getCollection('aboutSnippets');
+const experiences = aboutSnippets
+  .filter((entry) => entry.id.includes('experience'))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+{
+  experiences.map((job) => {
+    return (
+      <ResumeCard
+        timespan={job.data.timeline}
+        title={job.data.title}
+        organization={job.data.organization}
+        description={job.body}
+      />
+    );
+  })
+}

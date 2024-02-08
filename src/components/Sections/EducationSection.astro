@@ -1,0 +1,20 @@
+---
+import EducationCard from '@/components/Cards/ResumeCard.astro';
+import { getCollection } from 'astro:content';
+const aboutSnippets = await getCollection('aboutSnippets');
+const educations = aboutSnippets
+  .filter((entry) => entry.id.includes('education'))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+{
+  educations.map(({ data: education }) => {
+    return (
+      <EducationCard
+        timespan={education.timeline}
+        title={education.title}
+        organization={education.organization}
+      />
+    );
+  })
+}

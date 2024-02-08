@@ -1,0 +1,67 @@
+---
+import RedirectArrow from '@/components/svgs/RedirectArrow.astro';
+import LinkArrow from '@/components/svgs/LinkArrow.astro';
+interface Props {
+  redirect?: boolean;
+  url: string;
+  name: string;
+}
+
+const { url, name, redirect = false } = Astro.props;
+---
+
+<a class="project-card__link" href={url}>
+  <span class="project-card__link__words">{name}</span>
+  {
+    redirect ? (
+      <RedirectArrow class="arrow-icon arrow-icon--redirect" />
+    ) : (
+      <LinkArrow class="arrow-icon" />
+    )
+  }
+</a>
+
+<style>
+  .arrow-icon {
+    width: 20px;
+    height: 20px;
+    transform: translate(8px, 5px);
+  }
+  .arrow-icon--redirect {
+    /* margin-left: 0rem; */
+    transform: translateY(3px);
+  }
+  .project-card__link {
+    /* color: rgba(var(--primary-text-value), 0.7); */
+    color: rgba(var(--primary-text-value), 1);
+    transition-duration: 500ms;
+    display: flex;
+  }
+
+  .project-card__link:hover {
+    /* color: rgba(var(--primary-text-value), 1); */
+  }
+
+  .project-card__link__words {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .arrow-icon {
+      fill: rgba(var(--primary-text-value), 0.7);
+      transition:
+        transform 0.2s ease-in-out,
+        opacity 0.5s;
+    }
+
+    .project-card__link:hover .arrow-icon {
+      transform: translate(15px, 5px);
+    }
+
+    .project-card__link:hover .arrow-icon--redirect {
+      fill: rgba(var(--primary-text-value), 1);
+      transform: translate(2px, 0px);
+    }
+  }
+</style>
