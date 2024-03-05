@@ -12,12 +12,11 @@ const LANGUAGES = [
   "Lua",
   "NodeJS",
   "JSX",
-  "Tailwind CSS",
-  "CSS",
   "SCSS",
+  "PHP"
 ];
 
-const FRAMEWORKS = ["React", "Node.js", "ShadcnUI", "TailwindCSS","Express", "Astro.js", "Next.js" , "SvelteKit" , "Mux", "Gin" , "Chi"];
+const FRAMEWORKS = ["React", "Node.js", "ShadcnUI", "TailwindCSS","ExpressJS", "AstroJS", "NextJS" , "SvelteKit" , "Chi", "Gorilla Mux" , "Laravel","NestJS"];
 
 const DEV_TOOLS = [
   "Nvim",
