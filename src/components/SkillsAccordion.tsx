@@ -30,6 +30,12 @@ const DEV_TOOLS = [
   "Terraform",
 ];
 
+const DATABASES = ["PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis"];
+
+
+
+
+
 function List(items: String[]) {
   const list = items.map((item) => (
     <li key={item.toString()} className="tw-mb-4">
@@ -43,6 +49,7 @@ export default function SkillsAccordion() {
   const languages = List(LANGUAGES);
   const frameworks = List(FRAMEWORKS);
   const devTools = List(DEV_TOOLS);
+  const Databases = List(DATABASES);
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value="item-1">
@@ -56,6 +63,10 @@ export default function SkillsAccordion() {
       <AccordionItem value="item-3">
         <AccordionTrigger>Developer Tools</AccordionTrigger>
         <AccordionContent>{devTools}</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-4">
+        <AccordionTrigger>Databases</AccordionTrigger>
+        <AccordionContent>{Databases}</AccordionContent>
       </AccordionItem>
     </Accordion>
   );
