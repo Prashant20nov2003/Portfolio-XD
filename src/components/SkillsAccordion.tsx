@@ -9,28 +9,24 @@ const LANGUAGES = [
   "Golang",
   "TypeScript",
   "JavaScript",
+  "Python",
+  "Java",
+  "Bash",
   "Lua",
-  "NodeJS",
-  "JSX",
-  "SCSS",
-  "PHP"
+  "Java",
+  "Elixir",
+  "SQL",
 ];
 
-const FRAMEWORKS = ["React", "Node.js", "ShadcnUI", "TailwindCSS","ExpressJS", "AstroJS", "NextJS" , "SvelteKit" , "Chi", "Gorilla Mux" , "Laravel","NestJS"];
+const FRAMEWORKS = ["React", "NextJS", "Vue", "NuxtJS", "HTMX", "NodeJS", "ExpressJS", "SpringBoot", "tRPC", "gRPC", "TailwindCSS", "ShadcnUI", "SvelteKit", "AstroJS", "Chi", "NestJS", "Hono", "Jest", "Vitest", "Mock Service Worker", "Laravel"];
 
 const DEV_TOOLS = [
-  "Nvim",
-  "Git",
-  "VSCode",
-  "Docker",
-  "Kubernetes",
-  "GitHub",
-  "Jenkins",
-  "GitHub Actions",
-  "Terraform",
+  "Git", "Cypress", "Postman", "Ngnix", "Neovim", "Docker", "Kubernetes", "Github Actions", "Jenkins", "Ansible", "Grafana",
+"Prometheus", "Loki", "BullMQ", "RabbitMQ", "Kafka",
 ];
 
-const DATABASES = ["PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis"];
+const DATABASES = [ "PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis",
+  , "Turso" , "ElasticSearch"];
 
 
 
@@ -57,7 +53,7 @@ export default function SkillsAccordion() {
         <AccordionContent>{languages}</AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>Frameworks</AccordionTrigger>
+        <AccordionTrigger>Frameworks and Libraries</AccordionTrigger>
         <AccordionContent>{frameworks}</AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
