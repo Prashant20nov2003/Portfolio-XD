@@ -5,7 +5,7 @@ organization: Cloud Native Hackathon
 order: 1
 ---
 
-Built Cloud Native App using Napptive Cloud Platform.
+Built Cloud Native App using Flask deployed it on Napptive Cloud Platform.
 
 
 
