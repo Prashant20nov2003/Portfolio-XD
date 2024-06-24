@@ -6,27 +6,18 @@ import {
 } from "@/components/ui/accordion";
 
 const LANGUAGES = [
-  "Golang",
-  "TypeScript",
-  "JavaScript",
-  "Python",
-  "Java",
-  "Bash",
-  "Lua",
-  "Java",
-  "Elixir",
-  "SQL",
+  "TypeScript", "Python", "Golang", "JavaScript", "Bash", "Lua"
 ];
 
-const FRAMEWORKS = ["React", "Ne"NodeJS", "ExpressJS", "SpringBoot", "tRPC", "gRPC", "TailwindCSS", "ShadcnUI", "SvelteKit", "AstroJS", "Chi", "NestJS", "Hono", "Jest", "Vitest", "Mock Service Worker", "Laravel"];
+const FRAMEWORKS = ["NextJS", "React", "React Native", "Cobra", "AstroJS", "Molecular", "Hono", "NodeJS", "ExpressJS", "FastAPI", "Pydantic", "gRPC", "Fiber", "NestJS", "Jest", "Mock Service Worker"];
 
 const DEV_TOOLS = [
-  "Git", "Cypress", "Postman", "Ngnix", "Neovim", "Docker", "Kubernetes", "Github Actions", "Jenkins", "Ansible", "Grafana",
-"Prometheus", "Loki", "BullMQ", "RabbitMQ", "Kafka",
+  "Git", "Cypress", "Postman", "Ngnix", "Neovim"," Docker", "Elasticsearch", "Kubernetes", "Jenkins", "Github Actions", "Ansible", "Grafana", "Prometheus"
+  , "Loki", "Kafka", "BullMQ"," RabbitMQ"
 ];
 
 const DATABASES = [ "PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis",
-  , "Turso" , "ElasticSearch"];
+  , "KsqlDB"];
 
 
 

@@ -6,6 +6,6 @@ coverAlt: "A screenshot of CodeScupltor's Web App"
 github: "https://github.com/jasper-th-wang/Katex-Website/tree/38b85c72583bf99627e319d76917ea24d3cdad7d"
 liveLink: "https://www.katexfashion.com/"
 tags: ["HTML", "SCSS", "JavaScript"]
-featured: true
-featuredOrder: 1
+featured: false
+featuredOrder: 5
 ---

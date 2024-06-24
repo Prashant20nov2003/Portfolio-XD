@@ -5,7 +5,8 @@ cover: "../../assets/images/CodeScluptor.png"
 coverAlt: "A screenshot of CodeScupltor's Web App"
 github: "https://github.com/jasper-th-wang/Katex-Website/tree/38b85c72583bf99627e319d76917ea24d3cdad7d"
 liveLink: "https://www.katexfashion.com/"
+postLink: "/posts/lol"
 tags: ["HTML", "SCSS", "JavaScript"]
-featured: true
-featuredOrder: 4
+featured: false
+featuredOrder: 2
 ---
