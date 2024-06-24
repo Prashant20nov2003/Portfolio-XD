@@ -18,7 +18,7 @@ const LANGUAGES = [
   "SQL",
 ];
 
-const FRAMEWORKS = ["React", "NextJS", "Vue", "NuxtJS", "HTMX", "NodeJS", "ExpressJS", "SpringBoot", "tRPC", "gRPC", "TailwindCSS", "ShadcnUI", "SvelteKit", "AstroJS", "Chi", "NestJS", "Hono", "Jest", "Vitest", "Mock Service Worker", "Laravel"];
+const FRAMEWORKS = ["React", "Ne"NodeJS", "ExpressJS", "SpringBoot", "tRPC", "gRPC", "TailwindCSS", "ShadcnUI", "SvelteKit", "AstroJS", "Chi", "NestJS", "Hono", "Jest", "Vitest", "Mock Service Worker", "Laravel"];
 
 const DEV_TOOLS = [
   "Git", "Cypress", "Postman", "Ngnix", "Neovim", "Docker", "Kubernetes", "Github Actions", "Jenkins", "Ansible", "Grafana",
