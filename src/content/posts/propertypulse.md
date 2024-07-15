@@ -13,8 +13,8 @@ tags:
   - GoogleOAuth 
   - Google Cloud
 ---
+![landing page](/src/assets/images/property-pulse.png)
 
-<img src="/src/assets/images/property-pulse.png" alt="PropertyPulse" width="850" height="600">
 </br>
 
 # Contents
