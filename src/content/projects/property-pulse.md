@@ -5,7 +5,9 @@ cover: "../../assets/images/property-pulse.png"
 coverAlt: "a screenshot of Property Pulse"
 liveLink: "https://pulse-sooty.vercel.app/"
 github: "https://github.com/Prashant20nov2003/property-pulse"
+postLink: "/posts/propertypulse"
 tags: ["Next.js", "TailwindCSS", "NextAuth", "MongoDB", "Cloudinary", "MapBox", "GoogleOAuth", "Google Cloud"]
 featured: true
 featuredorder: 3
+
 ---

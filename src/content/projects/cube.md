@@ -4,7 +4,7 @@ description: "A minimalist K8s."
 cover: "../../assets/images/cube-light.png"
 coverAlt: "a screenshot of katexfashion.com"
 github: "https://github.com/Prashant20nov2003/Cube"
-postLink: "/posts/cube"
+postLink: "/posts/cube"http://localhost:4321/
 tags: ["Go", "Chi", "Docker SDK", "BoltDB", "Linux"]
 featured: true
 featuredOrder: 2

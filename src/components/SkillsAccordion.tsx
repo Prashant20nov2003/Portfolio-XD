@@ -6,18 +6,17 @@ import {
 } from "@/components/ui/accordion";
 
 const LANGUAGES = [
-  "TypeScript", "Python", "Golang", "JavaScript", "Bash", "Lua"
+  "TypeScript", "Python", "Golang", "JavaScript", "Bash", "Lua", "Elixir"
 ];
 
-const FRAMEWORKS = ["NextJS", "React", "React Native", "Cobra", "AstroJS", "Molecular", "Hono", "NodeJS", "ExpressJS", "FastAPI", "Pydantic", "gRPC", "Fiber", "NestJS", "Jest", "Mock Service Worker"];
+const FRAMEWORKS = ["NextJS", "React", "React Native", "Cobra", "AstroJS", "Molecular", "NodeJS", "ExpressJS", "FastAPI", "Pydantic", "gRPC", "Fiber", "NestJS", "Jest", "MSW"];
 
 const DEV_TOOLS = [
   "Git", "Cypress", "Postman", "Ngnix", "Neovim"," Docker", "Elasticsearch", "Kubernetes", "Jenkins", "Github Actions", "Ansible", "Grafana", "Prometheus"
   , "Loki", "Kafka", "BullMQ"," RabbitMQ"
 ];
 
-const DATABASES = [ "PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis",
-  , "KsqlDB"];
+const DATABASES = [ "PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis", "KsqlDB"];
 
 
 

@@ -4,11 +4,14 @@ author: Prashant Bhardwaj
 description: A simple estate management application built with Next.js, TailwindCSS, NextAuth, MongoDB, Cloudinary, MapBox, and GoogleOAuth.
 pubDate: 2024-06-24
 tags:
-  - Go
-  - Chi
-  - Docker SDK
-  - BoltDB
-  - Linux
+  - Next.js
+  - TailwindCSS
+  - NextAuth 
+  - MongoDB 
+  - Cloudinary 
+  - MapBox 
+  - GoogleOAuth 
+  - Google Cloud
 ---
 
 <img src="/src/assets/images/property-pulse.png" alt="PropertyPulse" width="850" height="600">
