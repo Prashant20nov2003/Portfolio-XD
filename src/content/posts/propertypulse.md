@@ -14,13 +14,11 @@ tags:
   - Google Cloud
 ---
 
-![landing page](/src/assets/images/property-pulse.png)
-
 </br>
 
 # Contents
-
 </br>
+
 
 ## Features
 

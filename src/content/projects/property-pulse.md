@@ -1,7 +1,7 @@
 ---
 title: "Property Pulse"
 description: "A simple estate management application built with Next.js, TailwindCSS, NextAuth, MongoDB, Cloudinary, MapBox, and GoogleOAuth."
-cover: "../../assets/images/property-pulse.png"
+cover: "../../assets/images/propertypulse.png"
 coverAlt: "a screenshot of Property Pulse"
 liveLink: "https://pulse-sooty.vercel.app/"
 github: "https://github.com/Prashant20nov2003/property-pulse"
