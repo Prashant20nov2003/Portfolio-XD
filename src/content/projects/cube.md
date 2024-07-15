@@ -7,7 +7,7 @@ github: "https://github.com/Prashant20nov2003/Cube"
 postLink: "/posts/cube"
 tags: ["Go", "Chi", "Docker SDK", "BoltDB", "Linux"]
 featured: true
-featuredOrder: 1
+featuredOrder: 2
 ---
 
 # Cube - Minimalistic Orchestrator
