@@ -6,18 +6,20 @@ pubDate: 2024-06-24
 tags:
   - Next.js
   - TailwindCSS
-  - NextAuth 
-  - MongoDB 
-  - Cloudinary 
-  - MapBox 
-  - GoogleOAuth 
+  - NextAuth
+  - MongoDB
+  - Cloudinary
+  - MapBox
+  - GoogleOAuth
   - Google Cloud
 ---
-![landing page](/src/assets/images/property-pulse.png)
+
+![landing page](/property-pulse.png)
 
 </br>
 
 # Contents
+
 </br>
 
 ## Features
@@ -42,7 +44,6 @@ Here are some of the current features that Property Pulse has:
 - [x] Custom 404 page
 
 Property Pulse uses the following technologies:
-
 
 - [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org/)
@@ -99,4 +100,3 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ---
-
