@@ -14,7 +14,7 @@ tags:
   - Google Cloud
 ---
 
-![landing page](/property-pulse.png)
+![landing page](/src/assets/images/property-pulse.png)
 
 </br>
 
