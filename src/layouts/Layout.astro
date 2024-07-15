@@ -239,17 +239,22 @@ const metadata = {
   /* Cap the width on tablet size */
 
   .container {
-    max-width: 624px;
+    max-width: 40rem;
     margin: 0 auto;
   }
 
   @media only screen and (min-width: 1024px) {
+    @media only screen and (min-height: 1300px) {
+      /* mitigate issues of intersection observer dimming the wrong sections */
+      :root {
+        font-size: 18px;
+      }
+    }
     body {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
     .container {
       display: flex;
       flex: 1;
@@ -261,7 +266,7 @@ const metadata = {
     }
 
     .container--alt {
-      max-width: 1200px;
+      max-width: 75rem;
     }
 
     h1 {
@@ -292,14 +297,15 @@ const metadata = {
    * Handles focus and unfocus of sections
    */
   const sections = document.querySelectorAll("section");
-  const links = document.querySelectorAll("a");
-  const textElements = ["H1", "H2", "P", "SPAN"];
 
   const options = {
     rootMargin: "-40% 0px -60% 0px",
   };
 
-  const intersectionCallback = (entries, observer) => {
+  const intersectionCallback = (
+    entries: IntersectionObserverEntry[],
+    _observer: IntersectionObserver
+  ) => {
     entries.forEach((entry) => {
       const navTarget = document.getElementById(
         `${entry.target.getAttribute("id")}Nav`
@@ -326,7 +332,7 @@ const metadata = {
 
   const cursor = document.getElementById("cursor");
 
-  const followCursorHandler = (e) => {
+  const followCursorHandler = (e: MouseEvent) => {
     cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
   };
 
@@ -344,6 +350,7 @@ const metadata = {
 
     if (isAnchor) return;
 
+    const textElements = ["H1", "H2", "P", "SPAN"];
     textElements.indexOf((e.target as HTMLElement).tagName) >= 0
       ? cursor.classList.add("hover-over-text")
       : cursor.classList.remove("hover-over-text");
