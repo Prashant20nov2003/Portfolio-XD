@@ -6,73 +6,63 @@ pubDate: 2024-06-24
 tags:
   - Resume
 ---
-
 # Prashant Bhardwaj
 
-- **Email:** [prashanttbhardwajj@gmail.com](mailto:prashanttbhardwajj@gmail.com)
-- **GitHub:** [github.com/Prashant20nov2003](https://github.com/Prashant20nov2003)
-- **LinkedIn:** [linkedin.com/in/prashant-bhardwaj20/](https://www.linkedin.com/in/prashant-bhardwaj20/)
-- **TypeHero:** [typehero.dev/@Prashant20nov2003](https://typehero.dev/@Prashant20nov2003)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=About.me&logoColor=white)](https://portfolio-xd.pages.dev/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:prashanttbhardwajj@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Prashant20nov2003)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/prashant-bhardwaj20/)
+[![TypeHero](https://img.shields.io/badge/TypeHero-4D4D4D?style=for-the-badge&logo=typescript&logoColor=white)](https://typehero.dev/@Prashant20nov2003)
 
 ## Skills
 
-- **Languages:** TypeScript, Python, Golang, JavaScript, Bash, Elixir, Lua, SQL, GraphQL
-- **Frameworks and Libraries:** NextJS, React, React Native, Cobra, AstroJS, Molecular, Hono, NodeJS, ExpressJS, FastAPI, Pydantic, gRPC, Fiber, NestJS, Jest, Mock Service Worker
-- **Tools:** Git, Cypress, Postman, Nginx, Neovim, Docker, Elasticsearch, Kubernetes, Jenkins, Github Actions, Ansible, Grafana, Prometheus, Loki, Kafka, BullMQ, RabbitMQ
-- **Cloud Servers and Databases:** AWS, Firebase, PostgreSQL, MongoDB, SQLite, Redis, ksqlDB
+- **Languages:** TypeScript, Python, Golang, JavaScript, Bash, Elixir, Lua, SQL
+- **Frameworks & Libraries:** Next.js, React, React Native, Cobra, Puppeteer, Scrapy, Astro, Molecular, Hono, Node, Express, FastAPI, Pydantic, gRPC, Fiber, Nest.js
+- **Developer Tools:** Git, Docker, Kubernetes, Jenkins, GitHub Actions, Cypress, Postman, Nginx, Neovim, Grafana, Prometheus
+- **Cloud & Databases:** AWS, PostgreSQL, MongoDB, Redis, SQLite, Elasticsearch, Kafka, BullMQ, RabbitMQ, ksqlDB
 
 ## Projects
 
-### [Property Pulse](https://pulse-sooty.vercel.app/)
+### [Artify | Design Platform](https://artify-samosa-arsenal.vercel.app/)
+*Technologies: Next.js, Fabric.js, Hono, Serverless Postgres(Neon), Shandcn, UploadThing*
 
-- **Technologies:** Next.js, TailwindCSS, NextAuth, MongoDB, Cloudinary, MapBox, GoogleOAuth, Google Cloud
-- **Details:**
-  - Developed a comprehensive application using Next.js and React, incorporating file-based routing, server/client components, and modern hooks for a seamless user experience.
-  - Designed a scalable backend with MongoDB and Mongoose, managing data modeling and schema validation.
-  - Optimized API routes for CRUD operations and dynamic content loading, enhancing system performance and scalability by 50%.
-  - Implemented secure authentication and authorization using Google OAuth and NextAuth, increasing account retention by 40%.
-  - Added advanced functionalities like property search, Mapbox geolocation, and real-time messaging to boost platform engagement by 60%.
-  - Improved visual and interactive appeal by 70% through Cloudinary multi-image uploads, Photoswipe galleries, dynamic pagination, and responsive design using Tailwind CSS.
-  - Successfully deployed on Vercel to ensure robust performance and scalability.
+- Developed a modern design application using **Next.js and Fabric.js**, achieving faster load times through **optimized rendering**
+- Implemented secure authentication with **Auth.js and Drizzle ORM,** resulting in enhanced user security and data protection
+- Engineered real-time collaboration features and **auto-save functionality**
 
-### [Cube](https://github.com/Prashant20nov2003/Cube)
+### [Social Media API Backend](https://github.com/Prashant20nov2003/GopherSocial)
+*Technologies: Golang, PostgreSQL, Redis, REST API, JWT, Docker*
 
-- **Technologies:** Golang, Chi, BoltDB, DockerSDK, Goprocinfo
-- **Details:**
-  - Architected and implemented Cube, a modular microservices-based orchestrator, using Go (Golang).
-  - Designed core components including Task, Worker, Manager, and Scheduler, and integrated Docker SDK for seamless container management.
-  - Enhanced Cube's efficiency by developing a persistent storage system using BoltDB, achieving a 30% reduction in task retrieval times.
-  - Integrated goprocinfo for real-time system metrics collection and exposure, improving monitoring capabilities by 40%.
-  - Conducted thorough performance testing, ensuring robust operation under high load conditions.
+- Engineered a **production-grade REST API** following **clean architecture principles** and **repository pattern**, implementing comprehensive **CRUD operations** for posts and user management
+- Implemented advanced features including **JWT authentication**, **role-based authorization**, **rate limiting**, and **Redis caching**, improving response times by **40%**
+- Developed robust **user feed algorithm** with **SQL optimization**, pagination, and filtering capabilities. Integrated **automated testing**, **structured logging**, and **metric monitoring** for production reliability
 
-### [GastroFlow Kitchen Microservice](https://github.com/Prashant20nov2003/GastroFlow-Kitchen-Microservice)
+### [JAE | E-Commerce](https://github.com/Prashant20nov2003/Just_Another_Ecommerce)
+*Technologies: Node.js, React.js, MongoDB, Redis, Stripe, JWT, Tailwind CSS*
 
-- **Technologies:** Golang, gRPC, Protocol Buffers, Docker
-- **Details:**
-  - Architected and implemented a robust order management system for the kitchen microservice using Golang and gRPC.
-  - Utilized Protocol Buffers for efficient and type-safe data serialization between services.
-  - Ensured high performance and low latency with asynchronous communication patterns and optimized intra-service transport mechanisms.
-  - Designed and deployed a comprehensive order tracking and kitchen management service, facilitating seamless order processing from placement to fulfillment.
-  - Conducted extensive browser testing to validate the end-to-end functionality and reliability of the system under various operational scenarios.
-  - Leveraged Docker for consistent development and testing environments, ensuring smooth deployment and scalability.
+- Built a comprehensive e-commerce platform using Node.js and React.js, featuring secure Stripe payment integration, shopping cart functionality, and product management system. Implemented JWT authentication with refresh tokens and Redis caching, resulting in 35% faster response times
+- Developed an advanced admin dashboard with real-time sales analytics, inventory tracking, and coupon management system. Optimized performance using MongoDB and Redis caching, achieving 45% faster page load times and enhanced user experience with responsive Tailwind CSS design
+
+### [Cube | Minimalistic Orchestrator](https://github.com/Prashant20nov2003/Cube)
+*Technologies: Golang, Chi, BoltDB, DockerSDK, Goprocinfo*
+
+**A Minimalistic Orchestrator using Go and Docker SDK:**
+- Architected and implemented Cube, a **modular microservices-based orchestrator**, using **Go (Golang)**. Designed core components including **Task, Worker, Manager, and Scheduler**, and integrated Docker SDK for seamless container management.
+
+**Optimized Performance and Monitoring with BoltDB and Goprocinfo:**
+- Enhanced Cube's efficiency by developing a **persistent storage system** using **BoltDB,** achieving a **30% reduction** in task retrieval times. Integrated **goprocinfo** for real-time system metrics collection and exposure, improving monitoring capabilities by **40%**.
 
 ## Experience
 
 ### Cloud-Native Hackathon
-
-- **Role:** Participant
-- **Date:** April, 2023
-- **Details:** Built a Cloud Native App using Napptive Cloud Platform.
+*Participant | April, 2023*
+- Built a Cloud Native App using Napptive Cloud Platform
 
 ### Innogeeks Winter Of Code (IWOC)
-
-- **Role:** Participant
-- **Date:** January, 2024 - February, 2024
-- **Details:** Participated in the Innogeeks Winter Of Code (IWOC 2.0).
+*Participant | January, 2024 - February, 2024*
+- Participated in the Innogeeks Winter Of Code (IWOC 2.0)
 
 ## Education
 
 ### Dr. A.P.J. Abdul Kalam Technical University
-
-- **Degree:** B.Tech. in Information Technology
-- **Date:** Sep, 2021 - Sep, 2025
+*B.Tech. in Information Technology | Sep, 2021 - Sep, 2025*
