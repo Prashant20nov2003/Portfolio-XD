@@ -1,9 +1,11 @@
 ---
-import { getEntryBySlug } from 'astro:content';
-const entry = await getEntryBySlug('aboutSnippets', 'about');
+
+import { getEntry } from 'astro:content';
+
+const entry = await getEntry('aboutSnippets', 'about');
+
 const { Content } = await entry.render();
 ---
-
 <Fragment>
   <Content />
 </Fragment>
