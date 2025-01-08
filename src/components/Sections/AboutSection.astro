@@ -1,11 +1,31 @@
 ---
 
 import { getEntry } from 'astro:content';
-
+import { Button } from '@/components/ui/button';
 const entry = await getEntry('aboutSnippets', 'about');
 
 const { Content } = await entry.render();
 ---
 <Fragment>
-  <Content />
+  <div class="about-content">
+    <Content />
+  </div>
+  <a
+    href="/prashant_resume.pdf"
+    target="_blank"
+    aria-label="My Resume (opens in a new tab)"
+  >
+    <Button variant="outline" size="lg" className="duration-500">
+      Download Resume
+    </Button>
+  </a>
 </Fragment>
+
+<style>
+  a {
+    all: unset;
+  }
+  .about-content {
+    margin-bottom: 2rem;
+  }
+</style>
