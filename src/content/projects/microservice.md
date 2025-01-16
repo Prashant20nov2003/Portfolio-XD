@@ -4,7 +4,7 @@ description: "GastroFlow is a backend microservice designed for Point of Sale (P
 cover: "../../assets/images/gRPC.png"
 coverAlt: "architecture of service"
 github: "https://github.com/Prashant20nov2003/GastroFlow-Kitchen-Microservice"
-tags: []
+tags: ["Golang", "gRPC", "Protocol Buffers", "Microservices"]
 featured: true
-featuredorder: 1
+featuredorder: 4
 ---

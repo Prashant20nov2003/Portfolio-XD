@@ -1,6 +1,6 @@
 ---
-timeline: September 2021 - September 2025 est.
-title: Bachelor of Technology in Information Technology
+timeline: August 2021 - July 2025
+title: Bachelor of Technology (Information Technology)
 organization: Noida Institute of Engineering and Technology(NIET)
 order: 1
 ---

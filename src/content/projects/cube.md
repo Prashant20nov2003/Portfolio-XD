@@ -1,13 +1,13 @@
 ---
 title: "Cube"
-description: "A minimalist K8s."
+description: "A minimalistic K8s."
 cover: "../../assets/images/cube-light.png"
 coverAlt: "a screenshot of cube architecture"
 github: "https://github.com/Prashant20nov2003/Cube"
 postLink: "/posts/cube"
 tags: ["Go", "Chi", "Docker SDK", "BoltDB", "Linux"]
 featured: true
-featuredOrder: 2
+featuredOrder: 1
 ---
 
 # Cube - Minimalistic Orchestrator

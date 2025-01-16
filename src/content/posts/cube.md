@@ -1,7 +1,7 @@
 ---
 title: Cube - a simple orchestrator
 author: Prashant Bhardwaj
-description: my journey of building and deploying my first every personal project
+description: a minimalistic orchestrator designed to efficiently manage and deploy microservices
 pubDate: 2024-06-24
 tags:
   - Go
