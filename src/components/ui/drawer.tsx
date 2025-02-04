@@ -26,7 +26,7 @@ const DrawerOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Overlay
     ref={ref}
-    className={cn("tw-fixed tw-inset-0 tw-z-50 tw-bg-black/80", className)}
+    className={cn("tw:fixed tw:inset-0 tw:z-50 tw:bg-black/80", className)}
     {...props}
   />
 ))
@@ -41,12 +41,12 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        "tw-fixed tw-inset-x-0 tw-bottom-0 tw-z-50 tw-mt-24 tw-flex tw-h-auto tw-flex-col tw-rounded-t-[10px] tw-bg-background",
+        "tw:fixed tw:inset-x-0 tw:bottom-0 tw:z-50 tw:mt-24 tw:flex tw:h-auto tw:flex-col tw:rounded-t-[10px] tw:bg-background",
         className
       )}
       {...props}
     >
-      <div className="tw-mx-auto tw-mt-4 tw-h-2 tw-w-[100px] tw-rounded-full tw-bg-muted" />
+      <div className="tw:mx-auto tw:mt-4 tw:h-2 tw:w-[100px] tw:rounded-full tw:bg-muted" />
       {children}
     </DrawerPrimitive.Content>
   </DrawerPortal>
@@ -58,7 +58,7 @@ const DrawerHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn("tw-grid tw-gap-1.5 tw-p-4 tw-text-left sm:tw-text-left", className)}
+    className={cn("tw:grid tw:gap-1.5 tw:p-4 tw:text-left tw:sm:text-left", className)}
     {...props}
   />
 )
@@ -69,7 +69,7 @@ const DrawerFooter = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn("tw-mt-auto tw-flex tw-flex-col tw-gap-2 tw-p-4", className)}
+    className={cn("tw:mt-auto tw:flex tw:flex-col tw:gap-2 tw:p-4", className)}
     {...props}
   />
 )
@@ -82,7 +82,7 @@ const DrawerTitle = React.forwardRef<
   <DrawerPrimitive.Title
     ref={ref}
     className={cn(
-      "tw-text-3xl tw-font-semibold tw-leading-none tw-tracking-tight",
+      "tw:text-3xl tw:font-semibold tw:leading-none tw:tracking-tight",
       className
     )}
     {...props}
@@ -96,7 +96,7 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
-    className={cn("tw-text-sm tw-text-muted-foreground", className)}
+    className={cn("tw:text-sm tw:text-muted-foreground", className)}
     {...props}
   />
 ))

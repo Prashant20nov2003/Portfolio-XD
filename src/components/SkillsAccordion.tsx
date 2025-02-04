@@ -25,11 +25,11 @@ const DATABASES = [ "PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis"];
 
 function List(items: String[]) {
   const list = items.map((item) => (
-    <li key={item.toString()} className="tw-mb-4">
+    <li key={item.toString()} className="tw:mb-4">
       {item}
     </li>
   ));
-  return <ul className="tw-list-disc tw-grid tw-grid-cols-2">{list}</ul>;
+  return <ul className="tw:list-disc tw:grid tw:grid-cols-2">{list}</ul>;
 }
 
 export default function SkillsAccordion() {
