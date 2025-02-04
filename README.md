@@ -1,6 +1,5 @@
 <div align="center">
 <h1 align="center">
-<img src="./public/favicon-96x96.png" width="96" />
 <br>https://portfolio-xd.pages.dev/</h1>
 <h3>◦ Developed with the software and tools below.</h3>
 
