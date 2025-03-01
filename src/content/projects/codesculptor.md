@@ -6,6 +6,6 @@ coverAlt: "CodeSculptor"
 liveLink: "https://codesculptor.vercel.app/"
 github: "https://github.com/Prashant20nov2003/snap"
 tags: ["React","JavaScript","ShadcnUI"]
-featured: false
+featured: true
 featuredorder: 5
 ---
