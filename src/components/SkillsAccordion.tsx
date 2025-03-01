@@ -20,9 +20,6 @@ const DEV_TOOLS = [
 const DATABASES = [ "PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis"];
 
 
-
-
-
 function List(items: String[]) {
   const list = items.map((item) => (
     <li key={item.toString()} className="tw:mb-4">
