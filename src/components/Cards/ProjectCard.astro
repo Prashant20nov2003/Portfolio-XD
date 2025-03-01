@@ -29,13 +29,7 @@ const {
 } = Astro.props;
 ---
 
-<!-- Type '{ children: any[]; class: string; target: string; }' is not assignable to type 'HTMLAttributes'. 
- Property 'target' does not exist on type 'HTMLAttributes'.
-The error occurs because the target attribute is not valid for a div element. 
-You should remove the target="_blank" attribute since it's only applicable to anchor (<a>) elements. -->
-
-
-<div class={`project-card ${className}`} {...rest}>
+<div class={`project-card ${className}`} target="_blank" {...rest}>
   {
     href ? (
       <a href={href} aria-label={`Go to ${title}'s project page'`}>
