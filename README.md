@@ -46,7 +46,7 @@ https://portfolio-xd.pages.dev/
 1. Clone the Portfolio-XD repository:
 
 ```sh
-git clone https://github.com/Prashant20nov2003/Portfolio-XD
+git clone https://github.com/prashsamosa/Portfolio-XD
 ```
 
 2. Change to the project directory:

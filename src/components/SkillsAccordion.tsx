@@ -5,19 +5,19 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const LANGUAGES = [
-  "TypeScript", "Python", "Golang", "Java", "JavaScript", "Bash", "Elixir", "Lua", "SQL"
+const LANGUAGES= [
+  "TypeScript", "Python", "Golang", "JavaScript", "Bash", "Elixir", "Lua", "SQL"
 ];
 
-const FRAMEWORKS = ["Next.js", "React", "React Native", "Router v7", "Astro", "Molecular", "Hono",
-  "Express", "FastAPI", "Pydantic", "Gin", "Fiber", "Nest.js"
+const FRAMEWORKS = ["Next", "React", "React Native", "Router v7", "Astro", "Hono",
+  "Express", "FastAPI", "Pydantic", "Nest.js"
   ];
 
 const DEV_TOOLS = [
-  "Git", "Docker", "Kubernetes", "GitHub Actions", "Cypress", "Nginx", "Neovim", "Grafana", "Prometheus", "Elasticsearch", "Kafka", "RabbitMQ"
+  "Git", "Docker", "Kubernetes", "Cypress", "Nginx", "Neovim", "Elasticsearch", "Kafka", "RabbitMQ"
 ];
 
-const DATABASES = [ "PostgreSQL", "MySQL", "MongoDB", "SQLite", "Redis"];
+
 
 
 function List(items: readonly string[]) {
@@ -33,7 +33,6 @@ export default function SkillsAccordion() {
   const languages = List(LANGUAGES);
   const frameworks = List(FRAMEWORKS);
   const devTools = List(DEV_TOOLS);
-  const databases = List(DATABASES);
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value="item-1">
@@ -47,10 +46,6 @@ export default function SkillsAccordion() {
       <AccordionItem value="item-3">
         <AccordionTrigger>Developer Tools</AccordionTrigger>
         <AccordionContent>{devTools}</AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-4">
-        <AccordionTrigger>Databases</AccordionTrigger>
-        <AccordionContent>{databases}</AccordionContent>
       </AccordionItem>
     </Accordion>
   );

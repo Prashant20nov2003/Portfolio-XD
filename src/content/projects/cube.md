@@ -3,7 +3,7 @@ title: "Cube"
 description: "A minimalistic K8s."
 cover: "../../assets/images/cube-light.png"
 coverAlt: "a screenshot of cube architecture"
-github: "https://github.com/Prashant20nov2003/Cube"
+github: "https://github.com/prashsamosa/Cube"
 postLink: "/posts/cube"
 tags: ["Go", "Chi", "Docker SDK", "BoltDB", "Linux"]
 featured: true
