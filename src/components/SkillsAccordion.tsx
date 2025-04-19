@@ -10,11 +10,11 @@ const LANGUAGES= [
 ];
 
 const FRAMEWORKS = ["Next", "React", "React Native", "Router v7", "Astro", "Hono",
-  "Express", "FastAPI", "Pydantic", "Nest.js"
+  "Express", "FastAPI", "Pydantic", "gRPC"
   ];
 
 const DEV_TOOLS = [
-  "Git", "Docker", "Kubernetes", "Cypress", "Nginx", "Neovim", "Elasticsearch", "Kafka", "RabbitMQ"
+  "Git", "Docker", "Kubernetes", "Cypress", "Nginx", "Neovim", "RabbitMQ"
 ];
 
 
