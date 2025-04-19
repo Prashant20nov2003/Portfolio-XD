@@ -7,15 +7,13 @@ const experiences = aboutSnippets
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-{
-  experiences.map((job) => {
-    return (
-      <ResumeCard
-        timespan={job.data.timeline}
-        title={job.data.title}
-        organization={job.data.organization}
-        description={job.body}
-      />
-    );
-  })
-}
+<>
+  {experiences.map((job) => (
+    <ResumeCard
+      timespan={job.data.timeline}
+      title={job.data.title}
+      organization={job.data.organization}
+      description={job.body}
+    />
+  ))}
+</>

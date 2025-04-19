@@ -20,19 +20,17 @@ crumbs.forEach((crumb, index) => {
     Object.keys(links).map((name, index, array) => {
       const divider = () =>
         index === crumbs.length - 1 ? null : <span>/</span>;
-      return (
-        <>
-          <a
-            href={links[name]}
-            class={`breadcrumbs__link ${
-              index === array.length - 1 ? "breadcrumbs__link--current" : ""
-            }`}
-          >
-            {name}
-          </a>
-          {divider}
-        </>
-      );
+      return [
+        <a
+          href={links[name]}
+          class={`breadcrumbs__link ${
+            index === array.length - 1 ? "breadcrumbs__link--current" : ""
+          }`}
+        >
+          {name}
+        </a>,
+        divider()
+      ];
     })
   }
 </p>

@@ -29,7 +29,7 @@ const {
 } = Astro.props;
 ---
 
-<div class={`project-card ${className}`} target="_blank" {...rest}>
+<div class={`project-card ${className}`} {...rest}>
   {
     href ? (
       <a href={href} aria-label={`Go to ${title}'s project page'`}>

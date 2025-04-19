@@ -7,14 +7,20 @@ interface Props {
   name: string;
 }
 
-const { url, name, redirect = false } = Astro.props;
+const { url, name, redirect = false } = Astro.props as Props;
 ---
 
-<a class="project-card__link" href={url}>
+<a
+  class="project-card__link"
+  href={url}
+  aria-label={name}
+  target={redirect ? "_blank" : undefined}
+  rel={redirect ? "noopener noreferrer" : undefined}
+>
   <span class="project-card__link__words">{name}</span>
   {
     redirect ? (
-      <RedirectArrow class="arrow-icon arrow-icon--redirect" />
+      <RedirectArrow class:list={["arrow-icon", redirect && "arrow-icon--redirect"]} />
     ) : (
       <LinkArrow class="arrow-icon" />
     )
@@ -28,25 +34,18 @@ const { url, name, redirect = false } = Astro.props;
     transform: translate(8px, 5px);
   }
   .arrow-icon--redirect {
-    /* margin-left: 0rem; */
     transform: translateY(3px);
   }
   .project-card__link {
-    /* color: rgba(var(--primary-text-value), 0.7); */
     color: rgba(var(--primary-text-value), 1);
     transition-duration: 500ms;
     display: flex;
+    align-items: center;
   }
-
-  .project-card__link:hover {
-    /* color: rgba(var(--primary-text-value), 1); */
-  }
-
   .project-card__link__words {
     text-decoration: underline;
     text-underline-offset: 4px;
   }
-
   @media screen and (min-width: 1024px) {
     .arrow-icon {
       fill: rgba(var(--primary-text-value), 0.7);
@@ -54,11 +53,9 @@ const { url, name, redirect = false } = Astro.props;
         transform 0.2s ease-in-out,
         opacity 0.5s;
     }
-
     .project-card__link:hover .arrow-icon {
       transform: translate(15px, 5px);
     }
-
     .project-card__link:hover .arrow-icon--redirect {
       fill: rgba(var(--primary-text-value), 1);
       transform: translate(2px, 0px);

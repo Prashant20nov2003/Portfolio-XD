@@ -7,14 +7,12 @@ const educations = aboutSnippets
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-{
-  educations.map(({ data: education }) => {
-    return (
-      <EducationCard
-        timespan={education.timeline}
-        title={education.title}
-        organization={education.organization}
-      />
-    );
-  })
-}
+<>
+  {educations.map(({ data: education }) => (
+    <EducationCard
+      timespan={education.timeline}
+      title={education.title}
+      organization={education.organization}
+    />
+  ))}
+</>
