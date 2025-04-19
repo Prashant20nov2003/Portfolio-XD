@@ -63,14 +63,6 @@ const metadata = {
       <main class={!isHome && "main--alt"}>
         <slot />
         <footer>
-          <!-- <p>
-            Built with love using <a href="https://astro.build/" target="_blank"
-              >Astro</a
-            >, designed with inspiration from various websites on <a
-              href="https://www.awwwards.com/"
-              target="_blank">awwwards.com</a
-            >
-          </p> -->
           <p>© Prashant Bhardwaj {new Date().getFullYear()}</p>
         </footer>
       </main>
@@ -210,7 +202,7 @@ const metadata = {
 
   /* Animated Cursor Styling */
 
-  #cursor {
+  /* #cursor {
     display: none;
     position: fixed;
     top: -5px;
@@ -234,7 +226,7 @@ const metadata = {
 
   .hover-over-text {
     opacity: 0.15;
-  }
+  } */
 
   /* Cap the width on tablet size */
 
@@ -292,67 +284,73 @@ const metadata = {
   }
 </style>
 
-<script>
-  /**
-   * Handles focus and unfocus of sections
-   */
-  const sections = document.querySelectorAll("section");
+<script is:inline>
+  // Handles focus and unfocus of sections
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
 
-  const options = {
-    rootMargin: "-40% 0px -60% 0px",
-  };
+    const options = {
+      rootMargin: "-40% 0px -60% 0px",
+    };
 
-  const intersectionCallback = (
-    entries: IntersectionObserverEntry[],
-    _observer: IntersectionObserver
-  ) => {
-    entries.forEach((entry) => {
-      const navTarget = document.getElementById(
-        `${entry.target.getAttribute("id")}Nav`
-      );
+    const intersectionCallback = function (entries, _observer) {
+      entries.forEach(function (entry) {
+        const navTarget = document.getElementById(
+          `${entry.target.getAttribute("id")}Nav`
+        );
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add("section-focus");
-        // nav target may be excluded from being tracked
-        navTarget?.classList.add("toggled");
-        return;
-      }
-      entry.target.classList.remove("section-focus");
+        if (entry.isIntersecting) {
+          entry.target.classList.add("section-focus");
+          // nav target may be excluded from being tracked
+          if (navTarget) navTarget.classList.add("toggled");
+          return;
+        }
+        entry.target.classList.remove("section-focus");
 
-      navTarget?.classList.remove("toggled");
+        if (navTarget) navTarget.classList.remove("toggled");
+      });
+    };
+
+    const navObserver = new IntersectionObserver(intersectionCallback, options);
+    sections.forEach(function (section) {
+      navObserver.observe(section);
     });
-  };
 
-  const navObserver = new IntersectionObserver(intersectionCallback, options);
-  sections.forEach((section) => navObserver.observe(section));
+    // // Handles cursor animations
+    // const cursor = document.getElementById("cursor");
 
-  /**
-   * Handles cursor animations
-   */
+    // const followCursorHandler = function (e) {
+    //   if (cursor) {
+    //     cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    //   }
+    // };
 
-  const cursor = document.getElementById("cursor");
+    // document.body.addEventListener("mousemove", function (e) {
+    //   followCursorHandler(e);
+    // });
 
-  const followCursorHandler = (e: MouseEvent) => {
-    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-  };
+    // document.body.addEventListener("mouseover", function (e) {
+    //   const target = e.target;
+    //   const hasAnchorParent = target.closest && target.closest("a");
+    //   const isAnchor = target.tagName === "A";
 
-  document.body.addEventListener("mousemove", (e) => {
-    followCursorHandler(e);
-  });
+    //   if (cursor) {
+    //     if (hasAnchorParent || isAnchor) {
+    //       cursor.classList.add("hover-over-a");
+    //     } else {
+    //       cursor.classList.remove("hover-over-a");
+    //     }
 
-  document.body.addEventListener("mouseover", (e) => {
-    const hasAnchorParent = (e.target as HTMLElement).closest("a");
-    const isAnchor = (e.target as HTMLElement).tagName === "A";
-
-    hasAnchorParent || isAnchor
-      ? cursor.classList.add("hover-over-a")
-      : cursor.classList.remove("hover-over-a");
-
-    if (isAnchor) return;
-
-    const textElements = ["H1", "H2", "P", "SPAN"];
-    textElements.indexOf((e.target as HTMLElement).tagName) >= 0
-      ? cursor.classList.add("hover-over-text")
-      : cursor.classList.remove("hover-over-text");
+    //     if (!isAnchor) {
+    //       const textElements = ["H1", "H2", "P", "SPAN"];
+    //       if (textElements.indexOf(target.tagName) >= 0) {
+    //         cursor.classList.add("hover-over-text");
+    //       } else {
+    //         cursor.classList.remove("hover-over-text");
+    //       }
+    //     }
+    //   }
+    // });
   });
 </script>
+script

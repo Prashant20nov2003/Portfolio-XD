@@ -4,7 +4,6 @@ import FormattedDate from '@/components/FormattedDate.astro';
 import Tags from '@/components/Tags.astro';
 import readingTime from 'reading-time';
 import Layout from '@/layouts/Layout.astro';
-import { imageConfig } from 'astro:assets';
 const { frontmatter, content } = Astro.props;
 const stats = readingTime(content);
 ---
